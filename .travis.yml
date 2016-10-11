@@ -7,5 +7,5 @@ addons:
   postgresql: "9.4"
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
-  - cp config/travis_ci_test.exs config/test.secret.exs
+  - cp config/travis_ci_test.exs config/test.exs
   - mix do ecto.create, ecto.migrate
